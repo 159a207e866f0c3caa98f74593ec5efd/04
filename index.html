@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title> Physics </title>
+</head>
+
+<body onload="setup()">
+  <div class="params-holder">
+    <div class="param">
+      <div class="text"> Индуктивность (Гн) </div>
+      <input size="4" type="number" step="any" id="l" class="input" />
+    </div>
+    <div class="param">
+      <div class="text"> Сопротивление (Ом) </div>
+      <input size="4" type="number" step="any" id="r" class="input" />
+    </div>
+    <div class="param">
+      <div class="text"> ЭДС источника тока (В) </div>
+      <input size="4" type="number" step="any" id="e" class="input" />
+    </div>
+    <div class="param">
+      <button class="button" id="run" onclick="run()">
+        Построить график
+      </button>
+    </div>
+  </div>
+
+  <div class="canvas-list">
+    <div class="canvas-holder">
+      <canvas id="canvasC" />
+    </div>
+    <div class="canvas-holder">
+      <canvas id="canvasO" />
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="heading"> <b> Источники информации </b> </div>
+    <ul>
+      <li> Презентация к пятой лекции, 6ой слайд (<a
+          href="https://study.physics.itmo.ru/pluginfile.php/38983/mod_resource/content/1/Lec2_05.%20SEM.%20Maxwell.pdf">ссылка</a>)
+      </li>
+    </ul>
+
+    Исходный код доступ на <a href="https://github.com/159a207e866f0c3caa98f74593ec5efd/04">github</a>.
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/3.0.1/chartjs-plugin-annotation.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
